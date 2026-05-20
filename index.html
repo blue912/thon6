@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang thông tin thôn số - Xã Yên Bình</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Cập nhật ảnh nền thiên nhiên Lào Cai chất lượng cao ổn định */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* CSS TÙY CHỈNH CHO NÚT MENU MỚI */
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 22px; 
+            color: #0d6e60; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            background-color: white; 
+            border-radius: 999px; 
+            text-transform: uppercase; 
+            text-decoration: none;
+            box-shadow: 0 0 10px 2px rgba(13, 110, 96, 0.4), 0 0 20px 4px rgba(13, 110, 96, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-btn span { margin-right: 12px; }
+
+        .nav-btn .icon-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #0d6e60; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn .icon-circle i {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 0 15px 4px rgba(13, 110, 96, 0.7), 0 0 30px 8px rgba(13, 110, 96, 0.3);
+        }
+
+        .nav-btn:hover .icon-circle { background-color: #0047ab; }
+
+        /* Ẩn thanh cuộn mặc định cho phần Thư viện trượt ngang */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="https://cdn.phototourl.com/free/2026-05-20-8abb80e1-8b35-47fc-a221-d825ae10053e.png" alt="Logo Thôn 6" class="w-auto mr-4" style="height: 86px;">
+                    <span class="font-bold text-2xl text-green-700">Thôn 6</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#gioi-thieu" class="nav-btn">
+                        <span>Giới thiệu</span>
+                        <div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div>
+                    </a>
+                    <a href="#hoat-dong" class="nav-btn">
+                        <span>Hoạt động</span>
+                        <div class="icon-circle"><i class="fa-solid fa-calendar-days"></i></div>
+                    </a>
+                    <a href="#di-tich" class="nav-btn">
+                        <span>Di tích</span>
+                        <div class="icon-circle"><i class="fa-solid fa-landmark"></i></div>
+                    </a>
+                    <a href="#thu-vien" class="nav-btn">
+                        <span>Thư viện</span>
+                        <div class="icon-circle"><i class="fa-solid fa-images"></i></div>
+                    </a>
+                    <a href="#ban-do" class="nav-btn">
+                        <span>Bản đồ</span>
+                        <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg h-screen flex items-center justify-center text-center">
+        <div class="px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">Chào mừng đến với Thôn 6</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">Xã Yên Bình • Tỉnh Lào Cai</p>
+            <p class="max-w-2xl mx-auto text-gray-300 mb-10">Điểm sáng nông thôn mới với khát vọng đổi mới, kết hợp hài hòa giữa gìn giữ bản sắc văn hóa và phát triển nông nghiệp số.</p>
+            <a href="#gioi-thieu" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1">
+                Khám phá ngay
+            </a>
+        </div>
+    </section>
+
+    <section id="gioi-thieu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Giới thiệu chung</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg" alt="Phong cảnh thôn" class="rounded-xl shadow-2xl">
+                </div>
+                <div class="space-y-6 text-lg text-gray-600">
+                    <p>Thôn 6 nằm tại trung tâm xã Yên Bình, được thiên nhiên ưu đãi với hệ sinh thái phong phú và cảnh quan trong lành, nằm lân cận khu vực hồ Thác Bà hiền hòa.</p>
+                    <p>Người dân Thôn 6 có truyền thống đoàn kết, cần cù lao động. Hiện nay, thôn đang từng bước chuyển mình với các mô hình nông nghiệp thông minh, ứng dụng công nghệ giám sát IoT và nền tảng số vào quản lý cây trồng, thủy sản nhằm nâng cao đời sống vật chất và tinh thần.</p>
+                    <ul class="space-y-3 mt-6">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Môi trường sống xanh, sạch, đẹp</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Hạ tầng giao thông, viễn thông đồng bộ</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Cộng đồng văn hóa, thân thiện</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hoat-dong" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hoạt động nổi bật</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://cdn.phototourl.com/free/2026-05-20-a63ed765-dff0-4a3a-a764-c0c126598590.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Nông nghiệp">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-900">Nông nghiệp số & Thủy sản</h3>
+                        <p class="text-gray-600">Phát triển các mô hình trồng trọt và nuôi trồng thủy sản ven hồ ứng dụng công nghệ, truy xuất nguồn gốc rõ ràng.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://cdn.phototourl.com/free/2026-05-20-101d2e4b-bcdb-48ba-be01-45ca9221ba7d.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Sinh hoạt cộng đồng">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-900">Sinh hoạt văn hóa</h3>
+                        <p class="text-gray-600">Thường xuyên tổ chức các lễ hội, hoạt động giao lưu văn nghệ tại nhà văn hóa thôn, thắt chặt tình làng nghĩa xóm.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Chuyển đổi số">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-900">Đào tạo & Công nghệ</h3>
+                        <p class="text-gray-600">Phổ biến kiến thức pháp luật, hướng dẫn người dân tiếp cận các dịch vụ công trực tuyến và hệ thống truyền hình hội nghị.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="di-tich" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Di tích & Thắng cảnh</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Những địa điểm mang đậm giá trị lịch sử và cảnh quan thiên nhiên quanh khu vực.</p>
+            </div>
+            <div class="flex flex-col md:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+                <div class="md:w-1/2">
+                    <img src="https://cdn.phototourl.com/free/2026-05-20-c6e65dcb-8564-4408-846b-c2c8b6c7581b.jpg" alt="Hồ Thác Bà" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <div class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 w-max">Gần Thôn 6</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Khu vực cảnh quan Hồ Thác Bà</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Được ví như "Hạ Long trên núi", khu vực lân cận mang đến không gian sinh thái tuyệt đẹp. Đây không chỉ là nguồn sinh kế mà còn là tiềm năng to lớn để phát triển du lịch cộng đồng trải nghiệm thiên nhiên vùng hồ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="thu-vien" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Thư viện Truyền thông</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div>
+                <div class="w-full h-[350px] md:h-[600px] mb-6 rounded-2xl overflow-hidden shadow-2xl bg-black border border-gray-700 relative flex justify-center items-center">
+                    <img id="mainGalleryImage" src="https://cdn.phototourl.com/free/2026-05-20-e707d2aa-71df-49c1-aec8-5bc393ce453d.png" alt="Ảnh phóng to" class="object-cover w-full h-full transition-opacity duration-300">
+                </div>
+
+                <div class="flex overflow-x-auto gap-4 pb-4 snap-x hide-scrollbar scroll-smooth">
+                    <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-e707d2aa-71df-49c1-aec8-5bc393ce453d.png')" src="https://cdn.phototourl.com/free/2026-05-20-e707d2aa-71df-49c1-aec8-5bc393ce453d.png" alt="Thumb 1" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-green-500 opacity-100 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
+					<img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-7ab9902b-1350-4bbe-87a1-8f402bc8e452.png')" src="https://cdn.phototourl.com/free/2026-05-20-7ab9902b-1350-4bbe-87a1-8f402bc8e452.png" alt="Thumb 2" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
+                    
+                    <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-61960c41-eecb-44d6-aab9-9640d6148c43.jpg')" src="https://cdn.phototourl.com/free/2026-05-20-61960c41-eecb-44d6-aab9-9640d6148c43.jpg" alt="Thumb 3" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
+                    
+                    <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg')" src="https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg" alt="Thumb 4" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
+
+                    <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg')" src="https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg" alt="Thumb 5" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
+					<img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-c7e7a0a6-6027-4fed-9d66-2e3dbc055b5f.png')" src="https://cdn.phototourl.com/free/2026-05-20-c7e7a0a6-6027-4fed-9d66-2e3dbc055b5f.png" alt="Thumb 5" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ban-do" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Vị trí Trung tâm Thôn</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Nhà văn hóa Thôn 6 - Nơi diễn ra các hoạt động sinh hoạt chung.</p>
+            </div>
+            <div class="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1044.7845681361998!2d104.95966054228576!3d21.733368010039875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1svi!2s!4v1779246940623!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-green-800 text-green-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <img src="https://cdn.phototourl.com/free/2026-05-20-8abb80e1-8b35-47fc-a221-d825ae10053e.png" alt="Logo" class="w-auto mr-3" style="height: 58px;">
+                    Thôn 6
+                </h3>
+                <p class="text-green-200">Xã Yên Bình, Tỉnh Lào Cai.</p>
+                <p class="mt-2 text-sm">Điểm sáng nông thôn mới, hướng tới cộng đồng số an toàn, thịnh vượng.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Liên kết nhanh</h4>
+                <ul class="space-y-2">
+                    <li><a href="#gioi-thieu" class="hover:text-white transition">Giới thiệu</a></li>
+                    <li><a href="#hoat-dong" class="hover:text-white transition">Hoạt động</a></li>
+                    <li><a href="#ban-do" class="hover:text-white transition">Bản đồ chỉ đường</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Liên hệ Trưởng thôn/BQL</h4>
+                <ul class="space-y-2">
+                    <li><i class="fa-solid fa-location-dot w-5 text-center mr-2"></i> Nhà văn hóa Thôn 6, Yên Bình</li>
+                    <li><i class="fa-solid fa-phone w-5 text-center mr-2"></i> 0216.xxx.xxxx</li>
+                    <li><i class="fa-solid fa-envelope w-5 text-center mr-2"></i> lienhe@thon6yenbinh.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-green-700 text-center text-sm">
+            <p>© 2026 Ban quản lý Thôn 6 - Xã Yên Bình - Tỉnh Lào Cai.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeMainImage(element, src) {
+            const mainImage = document.getElementById('mainGalleryImage');
+            
+            // Hiệu ứng mờ đi (fade-out)
+            mainImage.style.opacity = '0';
+            
+            // Đợi 150ms để đổi ảnh rồi hiện rõ lại (fade-in)
+            setTimeout(() => {
+                mainImage.src = src;
+                mainImage.style.opacity = '1';
+            }, 150);
+
+            // Bỏ viền xanh & giảm độ sáng các ảnh nhỏ khác
+            const thumbs = document.querySelectorAll('.gallery-thumb');
+            thumbs.forEach(thumb => {
+                thumb.classList.remove('border-green-500', 'opacity-100');
+                thumb.classList.add('border-transparent', 'opacity-50');
+            });
+            
+            // Thêm viền xanh và tăng độ sáng cho ảnh được click
+            element.classList.remove('border-transparent', 'opacity-50');
+            element.classList.add('border-green-500', 'opacity-100');
+        }
+    </script>
+</body>
+</html>
