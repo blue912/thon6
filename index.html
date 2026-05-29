@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="vi" class="scroll-smooth scroll-pt-28">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cổng thông tin Thôn 6 - Xã Yên Bình</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- THÊM THƯ VIỆN AOS CSS CHO HIỆU ỨNG CUỘN TRANG -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         /* THÊM FONT CHỮ CÁCH ĐIỆU PLAYFAIR DISPLAY CHO LOGO */
@@ -88,7 +92,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 relative">
 
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,7 +129,7 @@
     </nav>
 
     <section class="hero-bg h-screen flex items-center justify-center text-center">
-        <div class="px-4">
+        <div class="px-4" data-aos="fade-up" data-aos-duration="1000">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">Chào mừng đến với Thôn 6</h1>
             <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">Xã Yên Bình • Tỉnh Lào Cai</p>
             <p class="max-w-2xl mx-auto text-gray-300 mb-10">Điểm sáng nông thôn mới với khát vọng đổi mới, kết hợp hài hòa giữa gìn giữ bản sắc văn hóa và phát triển nông nghiệp số.</p>
@@ -137,15 +141,15 @@
 
     <section id="gioi-thieu" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Giới thiệu chung</h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div data-aos="fade-right">
                     <img src="https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg" alt="Phong cảnh thôn" class="rounded-xl shadow-2xl">
                 </div>
-                <div class="space-y-6 text-lg text-gray-600">
+                <div class="space-y-6 text-lg text-gray-600" data-aos="fade-left">
                     <p>Thôn 6 nằm tại trung tâm xã Yên Bình, được thiên nhiên ưu đãi với hệ sinh thái phong phú và cảnh quan trong lành, nằm lân cận khu vực hồ Thác Bà hiền hòa.</p>
                     <p>Người dân Thôn 6 có truyền thống đoàn kết, cần cù lao động. Hiện nay, thôn đang từng bước chuyển mình với các mô hình nông nghiệp thông minh, ứng dụng công nghệ giám sát IoT và nền tảng số vào quản lý cây trồng, thủy sản nhằm nâng cao đời sống vật chất và tinh thần.</p>
                     <ul class="space-y-3 mt-6">
@@ -160,12 +164,13 @@
 
     <section id="hoat-dong" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hoạt động nổi bật</h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <!-- Thêm delay cho từng thẻ để tạo hiệu ứng lần lượt xuất hiện -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="0">
                     <div class="h-48 bg-gray-200 overflow-hidden">
                         <img src="https://cdn.phototourl.com/free/2026-05-20-a63ed765-dff0-4a3a-a764-c0c126598590.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Nông nghiệp">
                     </div>
@@ -174,7 +179,7 @@
                         <p class="text-gray-600">Phát triển các mô hình trồng trọt và nuôi trồng thủy sản ven hồ ứng dụng công nghệ, truy xuất nguồn gốc rõ ràng.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="150">
                     <div class="h-48 bg-gray-200 overflow-hidden">
                         <img src="https://cdn.phototourl.com/free/2026-05-20-101d2e4b-bcdb-48ba-be01-45ca9221ba7d.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Sinh hoạt cộng đồng">
                     </div>
@@ -183,7 +188,7 @@
                         <p class="text-gray-600">Thường xuyên tổ chức các lễ hội, hoạt động giao lưu văn nghệ tại nhà văn hóa thôn, thắt chặt tình làng nghĩa xóm.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-48 bg-gray-200 overflow-hidden">
                         <img src="https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Chuyển đổi số">
                     </div>
@@ -198,13 +203,13 @@
 
     <section id="di-tich" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Di tích & Thắng cảnh</h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
                 <p class="mt-4 text-gray-600">Những địa điểm mang đậm giá trị lịch sử và cảnh quan thiên nhiên quanh khu vực.</p>
             </div>
             
-            <div class="relative group px-4">
+            <div class="relative group px-4" data-aos="zoom-in" data-aos-duration="800">
                 
                 <div class="relic-slide flex-col md:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-lg" style="display: flex;">
                     <div class="md:w-1/2">
@@ -262,9 +267,9 @@
         </div>
     </section>
 
-    <section id="thu-vien" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+    <section id="thu-vien" class="py-10 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <div class="text-center mb-8">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Thư viện Truyền thông</h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
             </div>
@@ -290,7 +295,7 @@
     </section>
 
     <section id="ban-do" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Vị trí Nhà văn hóa Thôn 6</h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
@@ -305,6 +310,22 @@
             </div>
         </div>
     </section>
+
+    <!-- THÊM: KHỐI NÚT LIÊN HỆ TRÔI NỔI (FLOATING BUTTONS) -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <!-- Nút Gọi điện -->
+        <a href="tel:0216xxxxxxx" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(34,197,94,0.5)] hover:bg-green-600 hover:scale-110 transition-all duration-300" title="Gọi điện cho Ban Quản Lý">
+            <i class="fa-solid fa-phone text-xl"></i>
+        </a>
+        <!-- Nút Zalo -->
+        <a href="https://zalo.me/0216xxxxxxx" target="_blank" class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(59,130,246,0.5)] hover:bg-blue-600 hover:scale-110 transition-all duration-300" title="Chat qua Zalo">
+            <span class="font-bold text-sm">Zalo</span>
+        </a>
+        <!-- Nút Messenger -->
+        <a href="https://m.me/trangcuathon" target="_blank" class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(37,99,235,0.5)] hover:bg-blue-700 hover:scale-110 transition-all duration-300" title="Chat qua Messenger">
+            <i class="fa-brands fa-facebook-messenger text-2xl"></i>
+        </a>
+    </div>
 
     <footer class="bg-green-800 text-green-100 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
@@ -338,7 +359,16 @@
         </div>
     </footer>
 
+    <!-- THÊM: SCRIPT KHỞI TẠO AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Khởi tạo hiệu ứng cuộn
+        AOS.init({
+            duration: 800, // thời gian chạy hiệu ứng (ms)
+            once: false,    // hiệu ứng chỉ chạy 1 lần khi cuộn tới
+            offset: 100,   // khoảng cách kích hoạt hiệu ứng khi cuộn (px)
+        });
+
         // Javascript cho Thư viện truyền thông
         function changeMainImage(element, src) {
             const mainImage = document.getElementById('mainGalleryImage');
