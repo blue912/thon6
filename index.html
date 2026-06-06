@@ -6,18 +6,14 @@
     <title>Cổng thông tin Thôn 6 - Xã Yên Bình</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- THÊM THƯ VIỆN AOS CSS CHO HIỆU ỨNG CUỘN TRANG -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        /* THÊM FONT CHỮ CÁCH ĐIỆU PLAYFAIR DISPLAY CHO LOGO */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
         
         body { font-family: 'Inter', sans-serif; }
         
-        /* Cập nhật ảnh nền thiên nhiên Lào Cai chất lượng cao ổn định */
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg');
             background-size: cover;
@@ -25,70 +21,32 @@
             background-attachment: fixed;
         }
 
-        /* CLASS ĐỊNH DẠNG RIÊNG CHO CHỮ THÔN 6 */
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 2px;
-        }
+        .logo-text { font-family: 'Playfair Display', serif; letter-spacing: 2px; }
 
-        /* CSS TÙY CHỈNH CHO NÚT MENU MỚI */
         .nav-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 22px; 
-            color: #0d6e60; 
-            font-weight: 600;
-            font-size: 0.9rem;
-            background-color: white; 
-            border-radius: 999px; 
-            text-transform: uppercase; 
-            text-decoration: none;
-            box-shadow: 0 0 10px 2px rgba(13, 110, 96, 0.4), 0 0 20px 4px rgba(13, 110, 96, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            z-index: 1;
+            display: inline-flex; align-items: center; padding: 10px 22px; color: #0d6e60; font-weight: 600;
+            font-size: 0.9rem; background-color: white; border-radius: 999px; text-transform: uppercase; 
+            text-decoration: none; box-shadow: 0 0 10px 2px rgba(13, 110, 96, 0.4), 0 0 20px 4px rgba(13, 110, 96, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; z-index: 1;
         }
 
         .nav-btn span { margin-right: 12px; }
-
-        .nav-btn .icon-circle {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #0d6e60; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .nav-btn .icon-circle i {
-            color: white;
-            font-size: 0.9rem;
-        }
-
-        .nav-btn:hover {
-            transform: translateY(-5px); 
-            box-shadow: 0 0 15px 4px rgba(13, 110, 96, 0.7), 0 0 30px 8px rgba(13, 110, 96, 0.3);
-        }
-
+        .nav-btn .icon-circle { width: 32px; height: 32px; border-radius: 50%; background-color: #0d6e60; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .nav-btn .icon-circle i { color: white; font-size: 0.9rem; }
+        .nav-btn:hover { transform: translateY(-5px); box-shadow: 0 0 15px 4px rgba(13, 110, 96, 0.7), 0 0 30px 8px rgba(13, 110, 96, 0.3); }
         .nav-btn:hover .icon-circle { background-color: #0047ab; }
-
-        /* Ẩn thanh cuộn mặc định cho phần Thư viện trượt ngang */
+        
         .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* CSS MỚI CHO SLIDESHOW DI TÍCH */
-        .relic-slide {
-            display: none;
-            animation: fadeEffect 0.8s ease-in-out;
+        /* ĐỊNH DẠNG NỀN BÌA SÁCH */
+        .cover-front {
+            background-image: linear-gradient(rgba(13, 110, 96, 0.85), rgba(13, 110, 96, 0.95)), url('https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg');
+            background-size: cover; background-position: center;
         }
-        @keyframes fadeEffect {
-            from { opacity: 0; transform: translateX(15px); }
-            to { opacity: 1; transform: translateX(0); }
+        .cover-back {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://cdn.phototourl.com/free/2026-05-20-e707d2aa-71df-49c1-aec8-5bc393ce453d.png');
+            background-size: cover; background-position: center;
         }
     </style>
 </head>
@@ -105,15 +63,11 @@
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#gioi-thieu" class="nav-btn">
                         <span>Giới thiệu</span>
-                        <div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div>
+                        <div class="icon-circle"><i class="fa-solid fa-book-open"></i></div>
                     </a>
                     <a href="#hoat-dong" class="nav-btn">
                         <span>Hoạt động</span>
                         <div class="icon-circle"><i class="fa-solid fa-calendar-days"></i></div>
-                    </a>
-                    <a href="#di-tich" class="nav-btn">
-                        <span>Di tích</span>
-                        <div class="icon-circle"><i class="fa-solid fa-landmark"></i></div>
                     </a>
                     <a href="#thu-vien" class="nav-btn">
                         <span>Thư viện</span>
@@ -139,25 +93,154 @@
         </div>
     </section>
 
-    <section id="gioi-thieu" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Giới thiệu chung</h2>
+    <section id="gioi-thieu" class="py-12 md:py-20 bg-[#e2dacb] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] pointer-events-none"></div>
+        
+        <div class="w-full max-w-[1920px] mx-auto px-2 sm:px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-8 md:mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sổ tay Giới thiệu</h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 italic text-sm">Click vào trang bên phải để lật tiếp • Click vào trang bên trái để lùi lại</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <img src="https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg" alt="Phong cảnh thôn" class="rounded-xl shadow-2xl">
+
+            <div class="w-full mx-auto relative p-3 md:p-6 lg:p-8 bg-[#3d2516] rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.5)] border-b-[10px] border-[#25150b]" data-aos="zoom-in" data-aos-duration="800">
+                
+                <div class="absolute top-2 bottom-2 left-1 right-1 bg-[#eae5d8] rounded-xl shadow-inner z-0 pointer-events-none hidden md:block"></div>
+                <div class="absolute top-3 bottom-3 left-2 right-2 bg-[#f3ede0] rounded-xl shadow-sm z-0 pointer-events-none hidden md:block"></div>
+
+                <div class="relative w-full h-[600px] lg:h-[75vh] min-h-[600px] max-h-[900px] bg-[#fdfbf7] rounded-xl overflow-hidden flex z-10 select-none">
+                    
+                    <div class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[60px] lg:w-[100px] z-30 pointer-events-none" 
+                         style="background: linear-gradient(to right, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.02) 35%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.02) 65%, rgba(0,0,0,0.25) 100%);">
+                    </div>
+                    <div class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-black/20 z-30 pointer-events-none"></div>
+
+                    <div class="book-spread absolute inset-0 flex transition-all duration-500 opacity-0 pointer-events-none invisible" data-spread="0">
+                        <div class="w-1/2 h-full cover-front text-white p-6 md:p-12 lg:p-16 flex flex-col items-center justify-center text-center relative border-r border-black/5 cursor-pointer left-page-zone">
+                            <div class="p-6 md:p-10 border-2 border-white/20 rounded-lg w-full h-full flex flex-col justify-center items-center bg-black/10 backdrop-blur-[1px]">
+                                <img src="https://cdn.phototourl.com/free/2026-05-20-8abb80e1-8b35-47fc-a221-d825ae10053e.png" alt="Logo" class="w-24 lg:w-32 mb-6 drop-shadow-md">
+                                <h1 class="logo-text text-4xl lg:text-6xl font-bold mb-4 tracking-wider">THÔN 6</h1>
+                                <div class="w-20 h-1 bg-yellow-400 mb-6 mx-auto"></div>
+                                <h2 class="text-xl lg:text-2xl font-light uppercase tracking-widest text-green-100">Xã Yên Bình</h2>
+                                <p class="mt-12 text-sm lg:text-base text-gray-200">Sổ tay giới thiệu</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 h-full p-6 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-between bg-[#fdfbf7] cursor-pointer right-page-zone">
+                            <div class="space-y-6 max-w-3xl mx-auto w-full">
+                                <h3 class="font-bold text-xl lg:text-3xl text-green-800 border-b-2 border-green-200 pb-3">1. Đặc điểm tình hình chung</h3>
+                                <div class="text-sm md:text-base lg:text-lg text-gray-700 space-y-4 leading-relaxed text-justify">
+                                    <p>Thôn 6 có vị trí địa lý thuận lợi nằm ở trung tâm xã Yên Bình có diện tích 235 ha, 243 hộ, 890 khẩu, giao thông thuận tiện, tạo điều kiện thuận lợi cho giao lưu kinh tế, văn hóa và phát triển sản xuất của địa phương.</p>
+                                    <img src="https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg" alt="Phong cảnh" class="w-full h-[180px] lg:h-[320px] object-cover rounded-lg shadow-md my-4">
+                                    <p>Chi bộ thôn có 57 đảng viên trong đó cán bộ nghỉ hưu chiếm 89,4%, còn lại là đảng viên trẻ là 10,6%.</p>
+                                </div>
+                            </div>
+                            <div class="text-right text-sm text-gray-400 font-semibold border-t border-gray-200/60 pt-3">Trang 1</div>
+                        </div>
+                    </div>
+
+                    <div class="book-spread absolute inset-0 flex transition-all duration-500 opacity-0 pointer-events-none invisible" data-spread="1">
+                        <div class="w-1/2 h-full p-6 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-between bg-[#fdfbf7] border-r border-black/5 cursor-pointer left-page-zone">
+                            <div class="space-y-6 max-w-3xl mx-auto w-full">
+                                <h3 class="font-bold text-xl lg:text-3xl text-green-800 border-b-2 border-green-200 pb-3">2. Phát triển kinh tế xã hội</h3>
+                                <div class="text-sm md:text-base lg:text-lg text-gray-700 space-y-4 leading-relaxed text-justify">
+                                    <p>Trong những năm qua, dưới sự lãnh đạo của Chi bộ thôn, sự điều hành của Ban quản lý thôn cùng tinh thần đoàn kết, đồng lòng của Nhân dân, tình hình kinh tế - xã hội của thôn đã có nhiều chuyển biến tích cực.</p>
+                                    <p>Đời sống vật chất và tinh thần của người dân ngày càng được nâng cao, diện mạo nông thôn ngày càng khang trang, sạch đẹp. Thu nhập bình quân đầu người đạt khoảng 60 triệu đồng/người/năm, đến nay toàn thôn không có hộ nghèo và cận nghèo.</p>
+                                    <p>Thôn có trên 50% diện tích là rừng trồng và ao hồ nhỏ, thuận lợi cho việc phát triển lâm nghiệp, cây dược liệu, cây ăn quả, xuất khẩu, chế biến gỗ, cũng như chăn nuôi gia súc, gia cầm và nuôi trồng thủy sản.</p>
+                                </div>
+                            </div>
+                            <div class="text-left text-sm text-gray-400 font-semibold border-t border-gray-200/60 pt-3">Trang 2</div>
+                        </div>
+                        <div class="w-1/2 h-full p-6 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-between bg-[#fdfbf7] cursor-pointer right-page-zone">
+                            <div class="space-y-6 max-w-3xl mx-auto w-full">
+                                <h3 class="font-bold text-xl lg:text-3xl text-green-800 border-b-2 border-green-200 pb-3">Kinh tế & Sản phẩm đặc trưng</h3>
+                                <div class="text-sm md:text-base lg:text-lg text-gray-700 space-y-4 leading-relaxed text-justify">
+                                    <p>Nhân dân tích cực chuyển đổi cơ cấu cây trồng, vật nuôi, ứng dụng tiến bộ khoa học kỹ thuật vào sản xuất. Hiện trên địa bàn thôn có 50 hộ kinh doanh, 05 công ty, doanh nghiệp.</p>
+                                    <img src="https://cdn.phototourl.com/free/2026-05-20-a63ed765-dff0-4a3a-a764-c0c126598590.jpg" alt="Nông nghiệp số" class="w-full h-[180px] lg:h-[280px] object-cover rounded-lg shadow-md my-4">
+                                    <p>Sản phẩm đặc trưng của thôn hiện nay là <b>Cá sấy hồ Thác Bà</b>, <b>Tre măng Bát độ</b>, với tổng diện tích khoảng 3 ha, mỗi năm xuất cho công ty Yên Thành trên 100 tấn.</p>
+                                </div>
+                            </div>
+                            <div class="text-right text-sm text-gray-400 font-semibold border-t border-gray-200/60 pt-3">Trang 3</div>
+                        </div>
+                    </div>
+
+                    <div class="book-spread absolute inset-0 flex transition-all duration-500 opacity-0 pointer-events-none invisible" data-spread="2">
+                        <div class="w-1/2 h-full p-6 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-between bg-[#fdfbf7] border-r border-black/5 cursor-pointer left-page-zone">
+                            <div class="space-y-6 max-w-3xl mx-auto w-full">
+                                <h3 class="font-bold text-xl lg:text-3xl text-green-800 border-b-2 border-green-200 pb-3">Văn hóa & Đời sống</h3>
+                                <div class="text-sm md:text-base lg:text-lg text-gray-700 space-y-4 leading-relaxed text-justify">
+                                    <p>Ngoài sản phẩm trên còn có cây dược liệu, cây ăn quả như quế, xả, mít và nho chủ yếu trồng trên đảo hồ Thác Bà bước đầu đã cho thu hoạch.</p>
+                                    <img src="https://cdn.phototourl.com/free/2026-05-20-101d2e4b-bcdb-48ba-be01-45ca9221ba7d.jpg" alt="Sinh hoạt cộng đồng" class="w-full h-[180px] lg:h-[280px] object-cover rounded-lg shadow-md my-4">
+                                    <p>Thôn luôn quan tâm thực hiện tốt các nhiệm vụ văn hóa – xã hội, giáo dục, y tế, giữ gìn an ninh trật tự. Các phong trào thi đua xây dựng nông thôn mới được ủng hộ sôi nổi.</p>
+                                </div>
+                            </div>
+                            <div class="text-left text-sm text-gray-400 font-semibold border-t border-gray-200/60 pt-3">Trang 4</div>
+                        </div>
+                        <div class="w-1/2 h-full p-6 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-between bg-[#fdfbf7] cursor-pointer right-page-zone">
+                            <div class="space-y-6 max-w-3xl mx-auto w-full">
+                                <h3 class="font-bold text-xl lg:text-3xl text-blue-800 border-b-2 border-blue-200 pb-3">Tiên phong Chuyển đổi số</h3>
+                                <div class="text-sm md:text-base lg:text-lg text-gray-700 space-y-4 leading-relaxed text-justify">
+                                    <p>Đặc biệt, thôn đã tích cực triển khai thực hiện công tác chuyển đổi số, ứng dụng công nghệ thông tin trong quản lý, điều hành và phục vụ Nhân dân. Mọi người từng bước sử dụng hiệu quả các nền tảng số, dịch vụ công trực tuyến.</p>
+                                    <img src="https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg" alt="Đào tạo số" class="w-full h-[160px] lg:h-[260px] object-cover rounded-lg shadow-md my-4">
+                                    <div class="bg-blue-50 border border-blue-200 p-4 lg:p-6 rounded-lg text-center shadow-inner">
+                                        <p class="font-bold text-blue-800 text-sm lg:text-lg">Thôn đã hoàn thành 21/21 chỉ tiêu theo bộ tiêu chí thôn số và được UBND xã Yên Bình vinh dự công nhận đạt danh hiệu “Thôn số”.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right text-sm text-gray-400 font-semibold border-t border-gray-200/60 pt-3">Trang 5</div>
+                        </div>
+                    </div>
+
+                    <div class="book-spread absolute inset-0 flex transition-all duration-500 opacity-0 pointer-events-none invisible" data-spread="3">
+                        <div class="w-1/2 h-full p-6 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-between bg-[#fdfbf7] border-r border-black/5 cursor-pointer left-page-zone">
+                            <div class="space-y-6 max-w-3xl mx-auto w-full">
+                                <h3 class="font-bold text-xl lg:text-3xl text-green-800 border-b-2 border-green-200 pb-3">3. Cơ cấu tổ chức</h3>
+                                <div class="text-sm md:text-base lg:text-lg text-gray-700 space-y-6 leading-relaxed">
+                                    <p>Ban quản lý và hệ thống chính trị luôn đi đầu, sát cánh cùng bà con nhân dân trong mọi hoạt động phong trào và mục tiêu số:</p>
+                                    <div class="bg-green-50/70 p-6 lg:p-8 rounded-xl border border-green-200 shadow-sm space-y-6">
+                                        <div class="flex items-start">
+                                            <i class="fa-solid fa-user-tie text-green-700 mt-1 lg:mt-1.5 mr-4 text-2xl lg:text-3xl"></i> 
+                                            <div>
+                                                <span class="font-bold text-gray-900 block text-base lg:text-xl mb-1">Bí thư Chi bộ kiêm Trưởng ban CTMT:</span>
+                                                <span class="text-gray-600 lg:text-lg">Đồng chí Nguyễn Văn Thống</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <i class="fa-solid fa-user-shield text-green-700 mt-1 lg:mt-1.5 mr-4 text-2xl lg:text-3xl"></i> 
+                                            <div>
+                                                <span class="font-bold text-gray-900 block text-base lg:text-xl mb-1">Trưởng thôn:</span>
+                                                <span class="text-gray-600 lg:text-lg">Đồng chí Đào Văn Thành</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-left text-sm text-gray-400 font-semibold border-t border-gray-200/60 pt-3">Trang 6</div>
+                        </div>
+                        <div class="w-1/2 h-full cover-back text-white p-6 md:p-12 lg:p-16 flex flex-col items-center justify-center text-center relative cursor-pointer right-page-zone">
+                            <div class="flex flex-col items-center justify-center h-full w-full">
+                                <img src="https://cdn.phototourl.com/free/2026-05-20-8abb80e1-8b35-47fc-a221-d825ae10053e.png" alt="Logo" class="w-24 lg:w-32 mb-6 opacity-80">
+                                <h3 class="logo-text text-3xl lg:text-4xl mb-6">Thôn 6 - Xã Yên Bình</h3>
+                                <div class="w-16 h-1 bg-green-500 rounded mb-6 mx-auto"></div>
+                                <p class="text-base lg:text-lg italic font-light text-gray-300">"Đoàn kết - Sáng tạo - Phát triển"</p>
+                                <p class="text-xs lg:text-sm text-gray-400 mt-20 opacity-60">© Trang thông tin thôn 6</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="space-y-6 text-lg text-gray-600" data-aos="fade-left">
-                    <p>Thôn 6 nằm tại trung tâm xã Yên Bình, được thiên nhiên ưu đãi với hệ sinh thái phong phú và cảnh quan trong lành, nằm lân cận khu vực hồ Thác Bà hiền hòa.</p>
-                    <p>Người dân Thôn 6 có truyền thống đoàn kết, cần cù lao động. Hiện nay, thôn đang từng bước chuyển mình với các mô hình nông nghiệp thông minh, ứng dụng công nghệ giám sát IoT và nền tảng số vào quản lý cây trồng, thủy sản nhằm nâng cao đời sống vật chất và tinh thần.</p>
-                    <ul class="space-y-3 mt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Môi trường sống xanh, sạch, đẹp</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Hạ tầng giao thông, viễn thông đồng bộ</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Cộng đồng văn hóa, thân thiện</li>
-                    </ul>
+
+                <div class="max-w-[320px] mx-auto flex justify-between items-center mt-6 lg:mt-8 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md border border-gray-200">
+                    <button id="prevSpreadBtn" class="w-10 h-10 lg:w-12 lg:h-12 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition disabled:opacity-40 disabled:cursor-not-allowed shadow-md text-lg">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <span id="spreadIndicator" class="text-sm lg:text-base font-black text-green-900 px-4 tracking-widest">
+                        1 / 4
+                    </span>
+                    <button id="nextSpreadBtn" class="w-10 h-10 lg:w-12 lg:h-12 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition disabled:opacity-40 disabled:cursor-not-allowed shadow-md text-lg">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
+
             </div>
         </div>
     </section>
@@ -169,7 +252,6 @@
                 <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Thêm delay cho từng thẻ để tạo hiệu ứng lần lượt xuất hiện -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="0">
                     <div class="h-48 bg-gray-200 overflow-hidden">
                         <img src="https://cdn.phototourl.com/free/2026-05-20-a63ed765-dff0-4a3a-a764-c0c126598590.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Nông nghiệp">
@@ -201,72 +283,6 @@
         </div>
     </section>
 
-    <section id="di-tich" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Di tích & Thắng cảnh</h2>
-                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
-                <p class="mt-4 text-gray-600">Những địa điểm mang đậm giá trị lịch sử và cảnh quan thiên nhiên quanh khu vực.</p>
-            </div>
-            
-            <div class="relative group px-4" data-aos="zoom-in" data-aos-duration="800">
-                
-                <div class="relic-slide flex-col md:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-lg" style="display: flex;">
-                    <div class="md:w-1/2">
-                        <img src="https://cdn.phototourl.com/free/2026-05-20-c6e65dcb-8564-4408-846b-c2c8b6c7581b.jpg" alt="Hồ Thác Bà" class="w-full h-[350px] md:h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                        <div class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 w-max">Gần Thôn 6</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Khu vực cảnh quan Hồ Thác Bà</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">Được ví như "Hạ Long trên núi", khu vực lân cận mang đến không gian sinh thái tuyệt đẹp. Đây không chỉ là nguồn sinh kế mà còn là tiềm năng to lớn để phát triển du lịch cộng đồng trải nghiệm thiên nhiên vùng hồ.</p>
-                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d118933.20849319808!2d104.89678144072381!3d21.73715106969894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3132e0bc2bf5c23d%3A0x6b14681c4e72fb4d!2zWcOqbiBCw6xuaCwgWcOqbiBCw6xuaCBEaXN0cmljdCwgWWVuIEJhaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" target="_blank" class="inline-flex items-center text-green-700 font-bold hover:text-green-900 transition-colors w-max">
-                            <i class="fa-solid fa-map-location-dot text-2xl mr-3"></i> 
-                            <span class="underline">Xem vị trí trên bản đồ</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relic-slide flex-col md:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
-                    <div class="md:w-1/2">
-                        <img src="https://cdn.phototourl.com/free/2026-05-20-61960c41-eecb-44d6-aab9-9640d6148c43.jpg" alt="Thắng cảnh thiên nhiên" class="w-full h-[350px] md:h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                        <div class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 w-max">Đặc trưng vùng cao</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Ruộng bậc thang & Đồi núi</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">Phong cảnh đồi núi hùng vĩ kết hợp với những thửa ruộng bậc thang tuyệt đẹp là nét đặc trưng không thể bỏ qua. Nơi đây mang lại không khí trong lành, bình yên cho mọi du khách ghé thăm.</p>
-                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d118933.20849319808!2d104.89678144072381!3d21.73715106969894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3132e0bc2bf5c23d%3A0x6b14681c4e72fb4d!2zWcOqbiBCw6xuaCwgWcOqbiBCw6xuaCBEaXN0cmljdCwgWWVuIEJhaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" target="_blank" class="inline-flex items-center text-green-700 font-bold hover:text-green-900 transition-colors w-max">
-                            <i class="fa-solid fa-map-location-dot text-2xl mr-3"></i> 
-                            <span class="underline">Xem vị trí trên bản đồ</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relic-slide flex-col md:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
-                    <div class="md:w-1/2">
-                        <img src="https://box.vnpt.vn/apps/files_sharing/publicpreview/ticwLtjD3fSAMdY?file=/&fileId=1577370&x=1920&y=1080&a=true&etag=69fd61876e7b7" alt="Điểm sinh hoạt văn hóa" class="w-full h-[350px] md:h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                        <div class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 w-max">Trung tâm bảo tồn</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Khu sinh hoạt Văn hóa Cổ</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">Nơi lưu giữ các giá trị văn hóa, tín ngưỡng lâu đời của đồng bào địa phương. Các hoạt động lễ hội truyền thống, múa hát dân ca thường xuyên được tổ chức tại đây nhằm bảo tồn bản sắc dân tộc.</p>
-                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d118933.20849319808!2d104.89678144072381!3d21.73715106969894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3132e0bc2bf5c23d%3A0x6b14681c4e72fb4d!2zWcOqbiBCw6xuaCwgWcOqbiBCw6xuaCBEaXN0cmljdCwgWWVuIEJhaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" target="_blank" class="inline-flex items-center text-green-700 font-bold hover:text-green-900 transition-colors w-max">
-                            <i class="fa-solid fa-map-location-dot text-2xl mr-3"></i> 
-                            <span class="underline">Xem vị trí trên bản đồ</span>
-                        </a>
-                    </div>
-                </div>
-
-                <button onclick="changeRelicSlide(-1)" class="absolute top-1/2 left-[-10px] md:left-[-20px] transform -translate-y-1/2 bg-white text-green-700 w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-700 hover:text-white transition-all z-10 border border-gray-200">
-                    <i class="fa-solid fa-chevron-left text-xl"></i>
-                </button>
-                <button onclick="changeRelicSlide(1)" class="absolute top-1/2 right-[-10px] md:right-[-20px] transform -translate-y-1/2 bg-white text-green-700 w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-700 hover:text-white transition-all z-10 border border-gray-200">
-                    <i class="fa-solid fa-chevron-right text-xl"></i>
-                </button>
-                
-            </div>
-        </div>
-    </section>
-
     <section id="thu-vien" class="py-10 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
             <div class="text-center mb-8">
@@ -282,11 +298,8 @@
                 <div class="flex overflow-x-auto gap-4 pb-4 snap-x hide-scrollbar scroll-smooth">
                     <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-e707d2aa-71df-49c1-aec8-5bc393ce453d.png')" src="https://cdn.phototourl.com/free/2026-05-20-e707d2aa-71df-49c1-aec8-5bc393ce453d.png" alt="Thumb 1" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-green-500 opacity-100 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
                     <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-7ab9902b-1350-4bbe-87a1-8f402bc8e452.png')" src="https://cdn.phototourl.com/free/2026-05-20-7ab9902b-1350-4bbe-87a1-8f402bc8e452.png" alt="Thumb 2" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
-                    
                     <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-61960c41-eecb-44d6-aab9-9640d6148c43.jpg')" src="https://cdn.phototourl.com/free/2026-05-20-61960c41-eecb-44d6-aab9-9640d6148c43.jpg" alt="Thumb 3" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
-                    
                     <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg')" src="https://cdn.phototourl.com/free/2026-05-20-173e15b5-fe5b-4c09-8e12-4a3100d1b608.jpg" alt="Thumb 4" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
-
                     <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg')" src="https://cdn.phototourl.com/free/2026-05-20-0012bc43-b1e1-4bc6-b881-806d751cb4a5.jpg" alt="Thumb 5" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
                     <img onclick="changeMainImage(this, 'https://cdn.phototourl.com/free/2026-05-20-c7e7a0a6-6027-4fed-9d66-2e3dbc055b5f.png')" src="https://cdn.phototourl.com/free/2026-05-20-c7e7a0a6-6027-4fed-9d66-2e3dbc055b5f.png" alt="Thumb 6" class="gallery-thumb w-32 md:w-48 h-24 md:h-32 object-cover rounded-lg cursor-pointer border-4 border-transparent opacity-50 hover:opacity-100 transition-all snap-start flex-shrink-0 shadow-md">
                 </div>
@@ -311,19 +324,12 @@
         </div>
     </section>
 
-    <!-- THÊM: KHỐI NÚT LIÊN HỆ TRÔI NỔI (FLOATING BUTTONS) -->
     <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-        <!-- Nút Gọi điện -->
-        <a href="tel:0216xxxxxxx" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(34,197,94,0.5)] hover:bg-green-600 hover:scale-110 transition-all duration-300" title="Gọi điện cho Ban Quản Lý">
+        <a href="tel:0388239442" class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(34,197,94,0.5)] hover:bg-green-600 hover:scale-110 transition-all duration-300" title="Gọi điện cho Trưởng thôn">
             <i class="fa-solid fa-phone text-xl"></i>
         </a>
-        <!-- Nút Zalo -->
-        <a href="https://zalo.me/0216xxxxxxx" target="_blank" class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(59,130,246,0.5)] hover:bg-blue-600 hover:scale-110 transition-all duration-300" title="Chat qua Zalo">
+        <a href="https://zalo.me/0388239442" target="_blank" class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(59,130,246,0.5)] hover:bg-blue-600 hover:scale-110 transition-all duration-300" title="Chat qua Zalo">
             <span class="font-bold text-sm">Zalo</span>
-        </a>
-        <!-- Nút Messenger -->
-        <a href="https://m.me/trangcuathon" target="_blank" class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(37,99,235,0.5)] hover:bg-blue-700 hover:scale-110 transition-all duration-300" title="Chat qua Messenger">
-            <i class="fa-brands fa-facebook-messenger text-2xl"></i>
         </a>
     </div>
 
@@ -346,11 +352,10 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-lg font-semibold text-white mb-4">Liên hệ Trưởng thôn/BQL</h4>
+                <h4 class="text-lg font-semibold text-white mb-4">Liên hệ Trưởng thôn</h4>
                 <ul class="space-y-2">
                     <li><i class="fa-solid fa-location-dot w-5 text-center mr-2"></i> Nhà văn hóa Thôn 6, Yên Bình</li>
-                    <li><i class="fa-solid fa-phone w-5 text-center mr-2"></i> 0216.xxx.xxxx</li>
-                    <li><i class="fa-solid fa-envelope w-5 text-center mr-2"></i> lienhe@thon6yenbinh.vn</li>
+                    <li><i class="fa-solid fa-phone w-5 text-center mr-2"></i>Ông Đào Xuân Thành: 0388239442</li>
                 </ul>
             </div>
         </div>
@@ -359,22 +364,84 @@
         </div>
     </footer>
 
-    <!-- THÊM: SCRIPT KHỞI TẠO AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Khởi tạo hiệu ứng cuộn
-        AOS.init({
-            duration: 800, // thời gian chạy hiệu ứng (ms)
-            once: false,    // hiệu ứng chỉ chạy 1 lần khi cuộn tới
-            offset: 100,   // khoảng cách kích hoạt hiệu ứng khi cuộn (px)
+        // Khởi động AOS cho hiệu ứng toàn trang
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({ duration: 800, once: false, offset: 100 });
         });
 
-        // Javascript cho Thư viện truyền thông
+        // =======================================================
+        // ĐOẠN JAVASCRIPT ĐIỀU KHIỂN SÁCH LẬT MỞ ĐÔI (CHẠY ỔN ĐỊNH CỤC BỘ)
+        // =======================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const spreads = document.querySelectorAll('.book-spread');
+            const prevBtn = document.getElementById('prevSpreadBtn');
+            const nextBtn = document.getElementById('nextSpreadBtn');
+            const indicator = document.getElementById('spreadIndicator');
+            
+            let currentSpread = 0;
+            const totalSpreads = spreads.length;
+
+            function updateBookDisplay(index) {
+                spreads.forEach((spread, i) => {
+                    if (i === index) {
+                        spread.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+                        spread.classList.add('opacity-100', 'pointer-events-auto', 'visible');
+                    } else {
+                        spread.classList.remove('opacity-100', 'pointer-events-auto', 'visible');
+                        spread.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+                    }
+                });
+                
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSpreads - 1;
+                
+                indicator.innerText = `${index + 1} / ${totalSpreads}`;
+            }
+
+            // GÁN SỰ KIỆN CLICK VÀO CÁC PHÂN VÙNG TRANG SÁCH TRÁI / PHẢI
+            document.querySelectorAll('.right-page-zone').forEach(zone => {
+                zone.addEventListener('click', () => {
+                    if (currentSpread < totalSpreads - 1) {
+                        currentSpread++;
+                        updateBookDisplay(currentSpread);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.left-page-zone').forEach(zone => {
+                zone.addEventListener('click', () => {
+                    if (currentSpread > 0) {
+                        currentSpread--;
+                        updateBookDisplay(currentSpread);
+                    }
+                });
+            });
+
+            // Sự kiện click cụm nút điều khiển tròn bên dưới sách
+            nextBtn.addEventListener('click', () => {
+                if (currentSpread < totalSpreads - 1) {
+                    currentSpread++;
+                    updateBookDisplay(currentSpread);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSpread > 0) {
+                    currentSpread--;
+                    updateBookDisplay(currentSpread);
+                }
+            });
+
+            // Khởi động hiển thị Spread đầu tiên lúc vừa tải trang
+            updateBookDisplay(currentSpread);
+        });
+
+        // Thư viện truyền thông (Gallery ảnh phóng to)
         function changeMainImage(element, src) {
             const mainImage = document.getElementById('mainGalleryImage');
-            
             mainImage.style.opacity = '0';
-            
             setTimeout(() => {
                 mainImage.src = src;
                 mainImage.style.opacity = '1';
@@ -388,25 +455,6 @@
             
             element.classList.remove('border-transparent', 'opacity-50');
             element.classList.add('border-green-500', 'opacity-100');
-        }
-
-        // Javascript MỚI cho Slide Show Di Tích
-        let relicSlideIndex = 1;
-        showRelicSlides(relicSlideIndex);
-
-        function changeRelicSlide(n) {
-            showRelicSlides(relicSlideIndex += n);
-        }
-
-        function showRelicSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("relic-slide");
-            if (n > slides.length) {relicSlideIndex = 1}    
-            if (n < 1) {relicSlideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slides[relicSlideIndex-1].style.display = "flex";  
         }
     </script>
 </body>
